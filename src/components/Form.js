@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import FormDataContext from "../context/FormDataProvider";
 import {
   Container,
   Button,
@@ -10,7 +11,7 @@ import {
 } from "./StyleElements";
 
 function Register() {
-  const [formData, setFormData] = useState({});
+  const { formData, setFormData } = useContext(FormDataContext);
   // const navigate = useNavigate();
 
   const handelOnChange = (e) => {
@@ -22,7 +23,6 @@ function Register() {
   const handelSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    alert(`The name you entered was: ${formData.name}`);
     // navigate("/ThankYou");
     setFormData("");
   };
