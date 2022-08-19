@@ -8,11 +8,12 @@ import {
   Input,
   Form,
   FormWrapper,
+  Header,
 } from "./StyleElements";
 
 function Register() {
   const { formData, setFormData } = useContext(FormDataContext);
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handelOnChange = (e) => {
     setFormData(
@@ -23,19 +24,18 @@ function Register() {
   const handelSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    // navigate("/ThankYou");
-    setFormData("");
+    navigate("/thankyou");
   };
 
   return (
     <Container>
-      <h1>Please Complete Form</h1>
+      <Header>Please Complete Form</Header>
       <FormWrapper>
         <Form onSubmit={handelSubmit}>
           <Label>Name:</Label>
           <Input
             type="name"
-            name="name"
+            name="Name"
             value={formData.name}
             autoComplete="off"
             required
@@ -44,8 +44,7 @@ function Register() {
           <Label>Email:</Label>
           <Input
             type="email"
-            id="email"
-            name="email"
+            name="Email"
             value={formData.email}
             autoComplete="off"
             required
@@ -54,7 +53,7 @@ function Register() {
           <Label>Address:</Label>
           <Input
             type="address"
-            name="address"
+            name="Address"
             autoComplete="off"
             required
             value={formData.address}
@@ -63,7 +62,7 @@ function Register() {
           <Label>City:</Label>
           <Input
             type="text"
-            name="city"
+            name="City"
             autoComplete="off"
             required
             value={formData.city}
@@ -72,7 +71,7 @@ function Register() {
           <Label>State:</Label>
           <Input
             type="text"
-            name="state"
+            name="State"
             autoComplete="off"
             required
             value={formData.state}
@@ -81,7 +80,7 @@ function Register() {
           <Label>Zip:</Label>
           <Input
             type="number"
-            name="zip"
+            name="Zip"
             autoComplete="off"
             required
             value={formData.zip}
