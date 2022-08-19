@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import FormDataContext from "../context/FormDataProvider";
-import { Container, Title, Wrapper } from "./StyleElements";
+import { Container, Text, Title, Wrapper } from "./StyleElements";
 
 function ThankYou() {
   const { formData } = useContext(FormDataContext);
@@ -8,7 +8,7 @@ function ThankYou() {
   console.log("Form Data", formData);
 
   const displayData = Object.entries(formData).map(([key, value]) => {
-    return <p>{`${key}: ${value}`}</p>;
+    return <Text key={key}>{`${key}: ${value}`}</Text>;
   });
 
   return (

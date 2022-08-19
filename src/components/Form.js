@@ -21,9 +21,7 @@ function Register() {
     );
   };
 
-  const handelSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
+  const handelSubmit = () => {
     navigate("/thankyou");
   };
 
@@ -36,7 +34,7 @@ function Register() {
           <Input
             type="name"
             name="Name"
-            value={formData.name}
+            value={"" || formData.name}
             autoComplete="off"
             required
             onChange={handelOnChange}
@@ -45,7 +43,7 @@ function Register() {
           <Input
             type="email"
             name="Email"
-            value={formData.email}
+            value={"" || formData.email}
             autoComplete="off"
             required
             onChange={handelOnChange}
@@ -56,7 +54,7 @@ function Register() {
             name="Address"
             autoComplete="off"
             required
-            value={formData.address}
+            value={"" || formData.address}
             onChange={handelOnChange}
           />
           <Label>City:</Label>
@@ -65,7 +63,7 @@ function Register() {
             name="City"
             autoComplete="off"
             required
-            value={formData.city}
+            value={"" || formData.city}
             onChange={handelOnChange}
           />
           <Label>State:</Label>
@@ -74,7 +72,7 @@ function Register() {
             name="State"
             autoComplete="off"
             required
-            value={formData.state}
+            value={"" || formData.state}
             onChange={handelOnChange}
           />
           <Label>Zip:</Label>
@@ -83,7 +81,7 @@ function Register() {
             name="Zip"
             autoComplete="off"
             required
-            value={formData.zip}
+            value={"" || formData.zip}
             onChange={handelOnChange}
           />
           <Button type="submit">Submit</Button>

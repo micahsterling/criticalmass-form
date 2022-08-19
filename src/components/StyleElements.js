@@ -10,6 +10,7 @@ export const Container = styled.div`
 
 export const Title = styled.h1``;
 export const Wrapper = styled.div``;
+export const Text = styled.p``;
 
 // Form styling
 
