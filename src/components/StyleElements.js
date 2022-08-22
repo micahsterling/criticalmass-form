@@ -4,7 +4,20 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2rem;
+  margin: 0 1rem;
+  font-family: "Roboto", sans-serif;
+`;
+
+export const Title = styled.h1``;
+export const Wrapper = styled.div``;
+export const Text = styled.p``;
+
+// Form styling
+
+export const Header = styled.h1`
+  @media screen and (max-width: 420px) {
+    font-size: 26px;
+  } ;
 `;
 
 export const FormWrapper = styled.div`
@@ -15,6 +28,7 @@ export const FormWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   padding: 1rem;
+  margin: 0 1rem;
   background-color: #16236b;
   font-family: "RM Neue", sans-serif;
   font-size: 22px;
@@ -26,12 +40,11 @@ export const Form = styled.form`
   flex-direction: column;
   justify-content: space-evenly;
   flex-grow: 1;
-  padding-bottom: 1rem;
   background-color: #16236b;
 `;
 
 export const Label = styled.label`
-  margin: 0.35rem 0;
+  margin: 0.5rem 0;
 `;
 
 export const Input = styled.input`
@@ -44,7 +57,7 @@ export const Button = styled.button`
   font-family: "RM Neue", sans-serif;
   font-size: 20px;
   padding: 0.25rem;
-  margin-top: 0.8rem;
+  margin: 1.5rem 5.5rem;
   border-radius: 0.5rem;
   background-color: #c7d1f8;
 `;
